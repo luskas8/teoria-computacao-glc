@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 import string
 import random
 
@@ -6,7 +5,7 @@ class GLC:
     def __init__(self) -> None:
         self.notEnds = []
         self.ends = []
-        self.start = NULL
+        self.start = None
         self.products = {}
     
     def appendNotEnds(self, newNotEnd) -> list:
@@ -17,7 +16,7 @@ class GLC:
     def appendEnds(self, newEnd) -> None:
         '''Append an end symbol'''
         self.ends.append(newEnd)
-        return 
+        return self.ends
 
     def setStart(self, newStart) -> None:
         '''Set the start symbol'''
@@ -25,7 +24,7 @@ class GLC:
         return
 
     def appendProducts(self, key, value) -> None:
-        '''Append an key value at product dictionary'''
+        '''Append a key value at product dictionary'''
         self.products[key] = value
         return
 
